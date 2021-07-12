@@ -66,4 +66,4 @@ hdmi_force_hotplug=1
 dtparam=i2c_arm=on
 dtparam=spi=on
 enable_uart=1
-#dtoverlay=tft35a:rotate=90,fps=60,speed=32000000
+dtoverlay=tft35a:rotate=0,fps=60,speed=32000000
