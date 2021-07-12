@@ -1,0 +1,21 @@
+auto lo
+iface lo inet loopback
+
+auto eth0
+#iface eth0 inet dhcp
+iface eth0 inet static
+address 10.0.0.1
+netmask 255.255.255.0
+#gateway 10.0.0.254
+
+allow-hotplug wlan0
+#iface wlan0 inet dhcp
+iface wlan0 inet static
+address 192.168.0.97
+netmask 255.255.255.0
+gateway 192.168.0.1
+#wireless-power off
+wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+
+#DO NOT MOVE OR REMOVE LINES ABOVE
+#SCRIPTS DEPEND ON THIS FIXED FORMAT
