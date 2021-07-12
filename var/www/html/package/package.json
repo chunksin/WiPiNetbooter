@@ -1,0 +1,80 @@
+{
+  "_from": "swiper",
+  "_id": "swiper@6.0.4",
+  "_inBundle": false,
+  "_integrity": "sha512-D+DBxgg81+uocgsvhmdzrpr4GHzhAt2yImArqzunrC80y7+/yCEAq/EJw1VASD+CBFNacF4F8FEIqJMLyDFM0g==",
+  "_location": "/swiper",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "swiper",
+    "name": "swiper",
+    "escapedName": "swiper",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/swiper/-/swiper-6.0.4.tgz",
+  "_shasum": "d3889383369e780e8d905e6aaf78a43dc3690176",
+  "_spec": "swiper",
+  "_where": "/root",
+  "author": {
+    "name": "Vladimir Kharlampidi"
+  },
+  "bugs": {
+    "url": "https://github.com/nolimits4web/swiper/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "dom7": "^3.0.0-alpha.7",
+    "ssr-window": "^3.0.0-alpha.4"
+  },
+  "deprecated": false,
+  "description": "Most modern mobile touch slider and framework with hardware accelerated transitions",
+  "engines": {
+    "node": ">= 4.7.0"
+  },
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/vladimirkharlampidi"
+  },
+  "homepage": "https://swiperjs.com",
+  "jsnext:main": "swiper.esm.js",
+  "keywords": [
+    "swiper",
+    "swipe",
+    "slider",
+    "touch",
+    "ios",
+    "mobile",
+    "cordova",
+    "phonegap",
+    "app",
+    "framework",
+    "framework7",
+    "carousel",
+    "gallery",
+    "plugin",
+    "react",
+    "slideshow"
+  ],
+  "license": "MIT",
+  "main": "swiper.cjs.js",
+  "module": "swiper.esm.js",
+  "name": "swiper",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nolimits4web/Swiper.git"
+  },
+  "scripts": {
+    "postinstall": "echo \"\u001b[35m\u001b[1mLove Swiper? Support Vladimir's work by donating or pledging on patreon:\u001b[22m\u001b[39m\n > \u001b[32mhttps://patreon.com/vladimirkharlampidi\u001b[0m\n\""
+  },
+  "sideEffects": false,
+  "typings": "swiper.d.ts",
+  "version": "6.0.4"
+}

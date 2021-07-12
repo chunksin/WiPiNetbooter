@@ -1,0 +1,557 @@
+/*RESET*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent;} body {line-height: 1;}ol, ul{list-style:none;} blockquote, q{quotes:none;} blockquote:before, blockquote:after, q:before, q:after{content:'';content:none;} :focus{outline:0;} ins{text-decoration:none;} del{text-decoration:line-through;} table{border-collapse:collapse; border-spacing:0;}
+
+/*MAIN*/
+body { 
+	font-size: 1.05em;
+	line-height: 1.0em;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	background: #f9f9f9;
+	color: #555;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+}
+
+textarea {
+  width: 200px;
+  height: 20em;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+scrollLink {
+
+	padding: 50px;
+}
+    
+
+.anchors {
+	padding: 3px;
+}
+
+a.anchors {
+    display: block;
+    position: relative;
+    top: -20px;
+    visibility: hidden;
+}
+
+div {
+        border-top: 20px;
+}
+
+a {
+
+	color: #4C9CF1;
+	text-decoration: none;
+	font-weight: bold;
+
+}
+
+a:hover {
+
+	color: #444;
+
+}
+
+img {
+
+	width: 60%;
+
+}
+
+#largeimg {
+
+	width: 100%;
+
+}
+
+header {
+
+	background: #fff;
+	width: 100%;
+	height: 76px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	border-bottom: 4px solid #4C9CF1;
+	z-index: 100;
+
+}
+
+#logo{
+
+	margin: 20px;
+	float: left;
+	width: 200px;
+	height: 40px;
+	background: url(../img/sega.png) no-repeat center;
+	display: block;
+
+}
+
+nav {
+
+	float: right;
+	padding: 20px;	
+	
+}
+
+#menu-icon {
+
+	display: hidden;
+	width: 40px;
+	height: 40px;
+	background: #4C8FEC url(../img/menu-icon.png) center;
+
+}
+
+a:hover#menu-icon {
+
+	background-color: #444;
+	border-radius: 4px 4px 0 0;
+
+}
+
+ul {
+
+	list-style: none;
+
+}
+
+li {
+
+	display: inline-block;
+	float: center;
+	padding: 8px
+
+}
+
+.current {
+
+	color: #2262AD;
+
+}
+
+section {
+
+	max-width: 980px;
+	position: relative;
+	padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+}
+
+h1 {
+
+	font-size: 1.5em;
+	color: #2262AD;
+	line-height: 1.0em;
+	margin: 10px 0 ;
+
+}
+
+h2 {
+
+	font-size: 0.75em;
+
+}
+
+p {
+
+	line-height: 1.45em;
+	margin-bottom: 20px;
+
+}
+
+.online {
+	color: #00de1a;
+}
+
+.offline {
+	color: #ff0000;
+}
+
+th, td {
+
+        padding: 3px;
+
+}
+
+.dropbtn {
+  background-color: #4C9CF1;
+  border-radius: 12px;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.bigdropbtn {
+  background-color: #4C9CF1;
+  border-radius: 12px;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #17569b;
+}
+
+.bigdropbtn:hover, .bigdropbtn:focus {
+  background-color: #17569b;
+}
+
+#rtnBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 30px; /* Place the button at the bottom of the page */
+  right: 10px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #4C9CF1; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding-left: 0px; /* Some padding */
+  padding-right: 0px; /* Some padding */
+  padding-top: 5px; /* Some padding */
+  padding-bottom: 5px; /* Some padding */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 14px; /* Increase font size */
+  opacity: 0.5;
+}
+
+#rtnBtn:hover {
+  background-color: #4C9CF1;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  font-size: 14px;
+  padding: 3px 10px;
+  text-decoration: none;
+  display: block;
+  font-weight: normal;
+}
+
+.dropdown-content a:hover {background-color: #ddd}
+
+.show {display:block;}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 21px;
+}
+
+.box1 {
+  padding: 1em 0.3em 1em 1em;
+  box-shadow: 0 0 20px -10px;
+  border-radius:12px;
+}
+
+.box2 {
+  padding: 0.5em 0.3em 0.5em 0.5em;
+  box-shadow: 0 0 20px -10px;
+  border-radius:12px;
+  width: 70%;
+}
+
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2196F3;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 20px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.tableReduced {
+  table-layout: fixed;
+  width: 80%;
+}
+
+#gameinfo {
+  border-collapse: collapse;
+  width: 80%;
+}
+
+#gameinfo td, #gameinfo th {
+  border: 1px solid #ddd;
+  font-size: 0.8em;
+  padding: 2px;
+}
+
+#gameinfo tr:nth-child(even){background-color: #f2f2f2;}
+
+#gameinfo tr:hover {background-color: #ddd;}
+
+#gameinfo th {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  text-align: left;
+  background-color: #2196F3;
+  color: white;
+}
+
+#options {
+  border-collapse: collapse;
+  width: 90%;
+}
+
+#options td, #options th {
+  border: 1px solid #ddd;
+  font-size: 1.0em;
+  padding: 3px;
+}
+
+#options tr:nth-child(even){background-color: #f2f2f2;}
+
+#options tr:hover {background-color: #ddd;}
+
+#options th {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  text-align: left;
+  background-color: #2196F3;
+  color: white;
+}
+
+#dimms {
+  border-collapse: collapse;
+  width: 90%;
+}
+
+#dimms td, #dimms th {
+  border: 1px solid #ddd;
+  font-size: 0.8em;
+  padding: 3px;
+}
+
+#dimms tr:nth-child(even){background-color: #f2f2f2;}
+
+#dimms tr:hover {background-color: #ddd;}
+
+#dimms th {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  text-align: left;
+  background-color: #2196F3;
+  color: white;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0, 82, 204, 0.9);
+  overflow-x: hidden;
+  transition: 0.3s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #e6e6e6;
+  display: block;
+  transition: 0.3s;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 30px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+#myProgress {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ddd;
+}
+
+#myBar {
+
+  width: 0%;
+  height: 30px;
+  background-color: #4C9CF1;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+
+.parent{
+    position: relative;
+}
+.over-img{
+    position: relative;
+    left: 1%;
+    width: 20px;
+    height: 20px;
+}
+
+input {
+  max-width: 160px;
+}
+
+
+/*MEDIA QUERY*/
+@media only screen and (max-width : 800px) {
+
+	header {
+
+		position: fixed;
+
+	}
+
+	#menu-icon {
+
+		display:inline-block;
+
+	}
+
+	nav ul, nav:active ul { 
+
+		display: none;
+		position: absolute;
+		padding: 5px;
+		background: #fff;
+		border: 5px solid #444;
+		right: 20px;
+		top: 60px;
+		width: 40%;
+		border-radius: 4px 0 4px 4px;
+
+	}
+
+	nav li {
+
+		text-align: center;
+		width: 100%;
+		padding: 10px 0;
+		margin: 0;
+
+	}
+
+	nav:hover ul {
+
+		display: block;
+
+	}
+
+        th, td {
+
+                 padding: 3px;
+
+        }
