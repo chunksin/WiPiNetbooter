@@ -45,7 +45,7 @@ The Setup menu is used for one time setup functions and additional features.<br>
 The Edit Game List function is used to show and hide games in the main game list. This is useful if you want to load a full set of ROMs onto your SD card but you'd like to hide all vertical, analog and driving games for instance. Use the link in the Enabled column to toggle the setting between Yes and No to Show/Hide the game.<br>
 <b>Manage Netdimms</b><br>
 Here you can set up as many netdimms as you need to support, one Pi can be used to netboot multiple systems. You can add and edit them here, the status of the netdimms is displayed here, shown in green if the Pi can reach the netdimm. The system type must be specified as it will be checked when a relevant game is sent.<br>
-Update Netdimm Firmware<br>
+<b>Update Netdimm Firmware</b><br>
 Here you can update type 1 netdimms up to version 4.03. It is recommended if upgrading from version 3.x that you update to 4.01 first.<br>
 <b>Card Emulator</b><br>
 The Card Emulator runs various scripts on the Pi to send and receive data to your Naomi, Chihiro or Triforce to emulate the magnetic card readers used on the original machines, useful if you want to get the most out of your games or have simply run out of cards!<br>
