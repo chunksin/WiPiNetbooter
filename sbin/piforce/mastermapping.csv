@@ -1,0 +1,27 @@
+CONTROLLER_BUTTON_TEST,TE,Test Button,Digital
+CONTROLLER_BUTTON_TILT,,Tilt Button,Digital
+CONTROLLER_BUTTON_COIN,RS CLICK,Coin Button,Digital
+CONTROLLER_BUTTON_START,ST,Start Button,Digital
+CONTROLLER_BUTTON_SERVICE,SE,Service Button,Digital
+CONTROLLER_BUTTON_UP,DP UP,Joystick Up Button,Digital
+CONTROLLER_BUTTON_DOWN,DP DOWN,Joystick Down Button,Digital
+CONTROLLER_BUTTON_LEFT,DP LEFT,Joystick Left Button,Digital
+CONTROLLER_BUTTON_RIGHT,DP RIGHT,Joystick Right Button,Digital
+CONTROLLER_BUTTON_LEFT_BUMPER,LB,Gear Down Button,Digital
+CONTROLLER_BUTTON_RIGHT_BUMPER,RB,Gear Up Button,Digital
+CONTROLLER_BUTTON_A,A,Button 1 / Trigger Button,Digital
+CONTROLLER_BUTTON_B,B,Button 2 / Screen In / Out,Digital
+CONTROLLER_BUTTON_C,C,Button 3 / Action Button 1,Digital
+CONTROLLER_BUTTON_D,D,Button 4 / View Change Button,Digital
+CONTROLLER_BUTTON_E,LS CLICK,Button 5,Digital
+CONTROLLER_BUTTON_F,,Button 6,Digital
+CONTROLLER_BUTTON_G,,Button 7,Digital
+CONTROLLER_BUTTON_H,,Button 8,Digital
+CONTROLLER_BUTTON_I,,Button 9,Digital
+CONTROLLER_BUTTON_J,,Button 10,Digital
+CONTROLLER_ANALOGUE_X,LS X,Analogue Joystick X / Steering Wheel,Analogue
+CONTROLLER_ANALOGUE_Y,LS Y,Analogue Joystick Y / Aeroplane Pitch,Analogue
+CONTROLLER_ANALOGUE_Z,RS X,Analogue Joystick Z,Analogue
+CONTROLLER_ANALOGUE_R,RT,Accelerator,Analogue
+CONTROLLER_ANALOGUE_L,LT,Brakes,Analogue
+CONTROLLER_ANALOGUE_T,RS Y,Analogue Joystick T,Analogue
