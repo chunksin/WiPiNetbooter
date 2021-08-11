@@ -1,5 +1,7 @@
 <?php
 
+set_time_limit(0);
+
 include 'menu.php';
 echo '<html lang="en"><head><meta charset="utf-8"><title>WiPi Netbooter</title>';
 echo '<link rel="stylesheet" href="css/sidebarstyles.css">';
@@ -35,11 +37,6 @@ $last = 0;
 
 echo '<p>';
 
-$loadtime = ceil($filesize/4010000);
-$totalloadtime = ($loadtime+6);
-$redirecttimer = (($totalloadtime+2)*1000);
-$frames = ($totalloadtime*10);
-
 ?>
 
 <section><center>
@@ -74,7 +71,6 @@ while($progress < 100) {
     sleep(0.1);
     pclose($handle);
 }
-
 
 echo '<script>';
 echo 'var elem = document.getElementById("myBar");';
