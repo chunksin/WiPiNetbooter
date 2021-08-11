@@ -30,7 +30,6 @@ except:
   pass
 
 currentpid = os.getpid()
-print(currentpid)
 
 if (openjvs == 'openon'):
   openjvsCommand1 = 'killall -9 openjvs'
@@ -46,8 +45,12 @@ if (ffbmode == 'ffbon'):
 
 bashCommand1 = 'sudo echo -n '+str(currentpid)+' | tee /sbin/piforce/pid.txt'
 os.system(bashCommand1)
+print
 bashCommand2 = 'sudo echo -n '+sys.argv[1]+' '+sys.argv[2]+' | tee /var/www/logs/log.txt'
 os.system(bashCommand2)
+print
+bashCommand3 = 'sudo echo Sending Game ...'
+os.system(bashCommand3)
 
 rom_dir = '/boot/roms/'
 romfile = rom_dir+sys.argv[1]

@@ -10,6 +10,7 @@ import struct, sys
 import socket
 import time
 import gzip
+import os
 
 #from Adafruit_CharLCDPlate import Adafruit_CharLCDPlate
 
@@ -115,6 +116,17 @@ def HOST_DumpToFile(file, addr, len):
 		sys.stderr.write("%08x\r" % x)
 		file.write(HOST_Read16(x))
 
+def getuncompressedsize(filename):
+	with open(filename, 'rb') as f:
+		f.seek(-4, 2)
+		return struct.unpack('I', f.read(4))[0]
+
+def getPercent(first, second, integer = False):
+	percent = first / second * 100
+	if integer:
+		return int(percent)
+	return percent
+
 # upload a file into DIMM memory, and optionally encrypt for the given key.
 # note that the re-encryption is obsoleted by just setting a zero-key, which
 # is a magic to disable the decryption.
@@ -126,10 +138,23 @@ def DIMM_UploadFile(name, key = None):
 	else:
 		a = open(name, "rb")
 	addr = 0
+	f = getuncompressedsize(name)
+	sys.stderr.write("Filesize: ")
+	sys.stderr.write(str(f))
+	sys.stderr.write("\n")
+        progressfile = open("/var/log/progress.txt", "w")
 	if key:
 		d = DES.new(key[::-1], DES.MODE_ECB)
 	while True:
-		sys.stderr.write("%08x\r" % addr)
+		i = int("%08x\r" % addr, 16)
+		progress = str(i)+"/"+str(f)
+		percentage = str(getPercent(float(i),f,True))
+		status = str(progress)+" "+str(percentage)+"%"+"\r"
+		sys.stderr.write(status)
+		sys.stderr.flush()
+		progressfile.write(percentage)
+		progressfile.write("\n")
+		progressfile.flush()
 		data = a.read(0x8000)
 		if not len(data):
 			break
@@ -141,6 +166,9 @@ def DIMM_UploadFile(name, key = None):
 	crc = ~crc
 	DIMM_Upload(addr, "12345678", 1)
 	DIMM_SetInformation(crc, addr)
+	time.sleep(0.2)
+        progressfile.write("COMPLETE")
+	progressfile.close()
 
 # obsolete
 def PATCH_MakeProgressCode(x):
