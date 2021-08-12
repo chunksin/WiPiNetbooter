@@ -22,6 +22,9 @@ foreach ($devices as $device) {
     }
   }
 }
+else{
+$emuport = '/dev/ttyUSB0'
+}
 
 if(empty($devices) || $emuport == null){
    echo '<br><b>No serial adaptor detected<br>';
