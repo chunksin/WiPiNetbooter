@@ -135,7 +135,6 @@ def main():
     ReadInput = ""
     CurrentCommand = ""
     PriorCommand = ""
-    ReadyToEject= 0
     HaveCard = 0
     StepNum = 0
     CleanStep = 0
@@ -159,10 +158,9 @@ def main():
     CardFileName = args.cardfile
     
     comport = args.comport
-    comport['alias'] = "Triforce"
+    comport['alias'] = "Chihiro"
     comport['buffer'] = b''
     comport['ser'] = serial.Serial(comport['port'], baudrate=9600, timeout=0, parity=serial.PARITY_NONE, bytesize = serial.EIGHTBITS, stopbits=serial.STOPBITS_ONE)
-    #comport['ser'] = serial.Serial(comport['port'], baudrate=19200, timeout=0, parity=serial.PARITY_NONE, bytesize = serial.EIGHTBITS, stopbits=serial.STOPBITS_ONE)
     comport['last_byte'] = clock()
     #comport['ser'].setRTS(True)
     
@@ -284,21 +282,14 @@ def main():
                         ReadInput=""
                         
                     if CurrentCommand == CARD_GET_CARD_STATE and "05" in ReadInput:
-                        output =b"\x02\x06\x20\x30\x30\x30\x03\x15"
-                        #print ("Reader Emulator: Sending: CARD_GET_CARD_STATE Command(20) Reply: 02 06 20 31 30 30 03 14")
-                        print ("Reader Emulator: Sending: CARD_GET_CARD_STATE Command(20) Reply: 02 06 20 30 30 30 03 15")
+                        output =b"\x02\x06\x20\x31\x30\x30\x03\x14"
+                        print ("Reader Emulator: Sending: CARD_GET_CARD_STATE Command(20) Reply: 02 06 20 31 30 30 03 14")
                         comport['ser'].write(output)
                         ReadInput=""
                         
                     if CurrentCommand == CARD_7D and "05" in ReadInput:
                         output =b"\x02\x06\x7D\x31\x30\x30\x03\x49"
                         print ("Reader Emulator: Sending: CARD_7D Command(7D) Reply: 02 06 7D 31 30 30 03 49")
-                        comport['ser'].write(output)
-                        ReadInput=""
-                        
-                    if CurrentCommand == CARD_7A and "05" in ReadInput:
-                        output =b"\x02\x06\x7A\x30\x30\x30\x03\x4F"
-                        print ("Reader Emulator: Sending: CARD_7A Command(7A) Reply: 02 06 7A 30 30 30 03 4F")
                         comport['ser'].write(output)
                         ReadInput=""
                         

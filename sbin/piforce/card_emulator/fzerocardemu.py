@@ -47,6 +47,7 @@ import binascii
 import serial
 import os
 
+currentpid = os.getpid()
 bashCommand1 = 'sudo echo -n '+str(currentpid)+' | tee /sbin/piforce/card_emulator/pid.txt'
 os.system(bashCommand1)
 
