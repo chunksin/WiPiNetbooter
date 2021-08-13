@@ -23,7 +23,7 @@ foreach ($devices as $device) {
   }
 }
 else{
-$emuport = '/dev/ttyUSB0'
+$emuport = '/dev/ttyUSB0';
 }
 
 if(empty($devices) || $emuport == null){
