@@ -30,7 +30,7 @@ if ($mode == 'id2'){
    $path = '/boot/config/cards/id2/';
    $files = array_values(array_diff(scandir($path), array('.', '..')));
    foreach ($files as $file) {
-   echo '<b><div class="box2"><a href="launchcard.php?card='.$file.'&mode=id2">'.$file.'</a></b></div></br>';
+   echo '<a href="launchcard.php?card='.$file.'&mode=id2"><img style="-webkit-user-select: none;" src="cards.php?name='.$file.'&amp;mode=id2"></a><br><br>';
          }
    echo '<form action="launchcard.php" method="get">Create New Card:<br><br><input type="text" name="card" onfocus="this.value=\'\'" value="Enter Card Name"><input type="hidden" name="mode" value="id2"><br><br><input type="submit" class="dropbtn" value="Submit"></form><br><br>';
 
@@ -43,7 +43,7 @@ if ($mode == 'id3'){
    $path = '/boot/config/cards/id3/';
    $files = array_values(array_diff(scandir($path), array('.', '..')));
    foreach ($files as $file) {
-   echo '<b><div class="box2"><a href="launchcard.php?card='.$file.'&mode=id3">'.$file.'</a></b></div></br>';
+   echo '<a href="launchcard.php?card='.$file.'&mode=id3"><img style="-webkit-user-select: none;" src="cards.php?name='.$file.'&amp;mode=id3"></a><br><br>';
          }
    echo '<form action="launchcard.php" method="get">Create New Card:<br><br><input type="text" name="card" onfocus="this.value=\'\'" value="Enter Card Name"><input type="hidden" name="mode" value="id3"><br><br><input type="submit" class="dropbtn" value="Submit"></form><br><br>';
 
@@ -56,7 +56,7 @@ if ($mode == 'wmmt'){
    $path = '/boot/config/cards/wmmt/';
    $files = array_values(array_diff(scandir($path), array('.', '..')));
    foreach ($files as $file) {
-   echo '<b><div class="box2"><a href="launchcard.php?card='.$file.'&mode=wmmt">'.$file.'</a></b></div></br>';
+   echo '<a href="launchcard.php?card='.$file.'&mode=wmmt"><img style="-webkit-user-select: none;" src="cards.php?name='.$file.'&amp;mode=wmmt"></a><br><br>';
          }
    echo '<form action="launchcard.php" method="get">Create New Card:<br><br><input type="text" name="card" onfocus="this.value=\'\'" value="Enter Card Name"><input type="hidden" name="mode" value="wmmt"><br><br><input type="submit" class="dropbtn" value="Submit"></form><br><br>';
 
@@ -69,7 +69,7 @@ if ($mode == 'mkgp'){
    $path = '/boot/config/cards/mkgp/';
    $files = array_values(array_diff(scandir($path), array('.', '..')));
    foreach ($files as $file) {
-   echo '<b><div class="box2"><a href="launchcard.php?card='.$file.'&mode=mkgp">'.$file.'</a></b></div></br>';
+   echo '<a href="launchcard.php?card='.$file.'&mode=mkgp"><img style="-webkit-user-select: none;" src="cards.php?name='.$file.'&amp;mode=mkgp"></a><br><br>';
          }
    echo '<form action="launchcard.php" method="get">Create New Card:<br><br><input type="text" name="card" onfocus="this.value=\'\'" value="Enter Card Name"><input type="hidden" name="mode" value="mkgp"><br><br><input type="submit" class="dropbtn" value="Submit"></form><br><br>';
 
@@ -82,7 +82,7 @@ if ($mode == 'fzero'){
    $path = '/boot/config/cards/fzero/';
    $files = array_values(array_diff(scandir($path), array('.', '..')));
    foreach ($files as $file) {
-   echo '<b><div class="box2"><a href="launchcard.php?card='.$file.'&mode=fzero">'.$file.'</a></b></div></br>';
+   echo '<a href="launchcard.php?card='.$file.'&mode=fzero"><img style="-webkit-user-select: none;" src="cards.php?name='.$file.'&amp;mode=fzero"></a><br><br>';
          }
    echo '<form action="launchcard.php" method="get">Create New Card:<br><br><input type="text" name="card" onfocus="this.value=\'\'" value="Enter Card Name"><input type="hidden" name="mode" value="fzero"><br><br><input type="submit" value="Submit"></form><br><br>';
 
