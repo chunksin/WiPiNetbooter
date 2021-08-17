@@ -11,16 +11,11 @@ echo '<h1><a href="setup.php">Card Reader Emulator</a></h1>';
 
 if ($mode == 'main'){
    echo 'Please select the card reader emulator mode from the list below</br></br>';
-   echo '<div class="box2">';
-   echo '<a href="cardemulator.php?mode=id2">Initial D2</a></div></br>';
-   echo '<div class="box2">';
-   echo '<a href="cardemulator.php?mode=id3">Initial D3</a></div></br>';
-   echo '<div class="box2">';
-   echo '<a href="cardemulator.php?mode=wmmt">Wangan Midnight</a></div></br>';
-   echo '<div class="box2">';
-   echo '<a href="cardemulator.php?mode=mkgp">Mario Kart GP/2</a></div></br>';
-   echo '<div class="box2">';
-   echo '<a href="cardemulator.php?mode=fzero">F-Zero AX</a></div></br>';
+   echo '<a href="cardemulator.php?mode=id2"><img src="images/initd2.png"></a></br><br>';
+   echo '<a href="cardemulator.php?mode=id3"><img src="images/initdv3e.png"></a></br><br>';
+   echo '<a href="cardemulator.php?mode=wmmt"><img src="images/wmmt.gif"></a></br><br>';
+   echo '<a href="cardemulator.php?mode=mkgp"><img src="images/mkgp.png"></a></br><br>';;
+   echo '<a href="cardemulator.php?mode=fzero"><img src="images/FZ.png"></a></br>';
 }
 
 if ($mode == 'id2'){
