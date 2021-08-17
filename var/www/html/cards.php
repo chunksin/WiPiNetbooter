@@ -30,9 +30,15 @@ $path = "/boot/config/cards/wmmt/";
 }
 
 $textcolour = imagecolorallocate($cardimage, 0, 0, 0);
-$font_path = 'img/fixedsys.ttf';
+$namefont_path = 'img/Barlow-Light.ttf';
+$font_path = 'img/BarlowCondensed-Light.ttf';
 
-$saved ="Last Save:";
+if ($mode == "wmmt" || $mode == "mkgp"){
+$textcolour = imagecolorallocate($cardimage, 153,50,204);
+$font_path = 'img/BarlowCondensed-Light.ttf';
+}
+
+$saved ="LAST SAVE:";
 $filename = $path.$name;
 $lastModifiedTimestamp = filemtime($filename);
 $date =date("M d Y", $lastModifiedTimestamp);
@@ -53,49 +59,49 @@ $timetop=170;
 }
 
 if ($mode == "fzero"){
-$textsize=16;
+$textsize=15;
 $angle=0;
 $left=35;
-$texttop=80;
-$savedsize=16;
-$savedtop=115;
-$datesize=16;
-$datetop=135;
-$timeleft=160;
-$timesize=16;
-$timetop=135;
+$texttop=81;
+$savedsize=15;
+$savedtop=118;
+$datesize=15;
+$datetop=138;
+$timeleft=120;
+$timesize=15;
+$timetop=138;
 }
 
 if ($mode == "mkgp"){
 $textsize=24;
 $angle=0;
 $left=60;
-$texttop=70;
+$texttop=72;
 $savedsize=16;
-$savedtop=95;
+$savedtop=97;
 $datesize=16;
-$datetop=115;
-$timeleft=185;
+$datetop=117;
+$timeleft=150;
 $timesize=16;
-$timetop=115;
+$timetop=117;
 }
 
 if ($mode == "wmmt"){
-$textsize=20;
+$textsize=24;
 $angle=0;
 $left=50;
-$texttop=67;
+$texttop=70;
 $savedsize=20;
-$savedtop=100;
+$savedtop=102;
 $datesize=20;
-$datetop=135;
+$datetop=137;
 $timeleft=50;
 $timesize=20;
-$timetop=170;
+$timetop=172;
 }
 
-imagettftext($cardimage, $textsize,$angle,$left,$texttop, $textcolour, $font_path, $name);
-imagettftext($cardimage, $datesize,$angle,$left,$datetop, $textcolour, $font_path, $date);
+imagettftext($cardimage, $textsize,$angle,$left,$texttop, $textcolour, $namefont_path, strtoupper($name));
+imagettftext($cardimage, $datesize,$angle,$left,$datetop, $textcolour, $font_path, strtoupper($date));
 imagettftext($cardimage, $savedsize,$angle,$left,$savedtop, $textcolour, $font_path, $saved);
 imagettftext($cardimage, $timesize,$angle,$timeleft,$timetop, $textcolour, $font_path, $time);
 
