@@ -53,9 +53,9 @@ $savedsize=18;
 $savedtop=115;
 $datesize=18;
 $datetop=145;
-$timeleft=115;
+$timeleft=215;
 $timesize=18;
-$timetop=170;
+$timetop=145;
 }
 
 if ($mode == "fzero"){
