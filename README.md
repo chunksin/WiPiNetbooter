@@ -65,7 +65,7 @@ For those of you who like to code, you can access the source files for the web i
 When the Pi starts up it executes a file called rc.local that fires up a python script /sbin/piforce/check.py. This script checks a few files in the piforce folder to get settings for the power and boot modes. It then sends a netboot command if set to single mode and a shutdown command with a timer if the power mode is set to auto. The CSV file is copied back to the boot partition as part of the shutdown routine.<br>
 Most of the web code is PHP so the pages are generated as they are loaded, the benefit is you can make changes on the fly without having to restart the Pi. There is a sidebarstyles.css file in /var/www/html/css that can be modified to change the colours and look and feel of the menus and webpages.<br><br>
 All data for the games is scraped from the romsinfo.csv file held in the /var/www/html/csv folder, if you wish to add more columns bear in mind the existing scripts refer to the absolute column reference so you'll need to add any new ones after the existing columns. There is a way to import CSV data in as a multidimensional array using PHP but I got lost quite quickly in the coding for that, so my script just reads and writes line by line.<br><br>
-Here are the cable pinouts you need for the Card Emulator to work, I bought a straight through female serial connector on eBay for £3, cut it in half and crimped a 5 pin JST NH connector on the end.<br><br>
+Here are the cable pinouts you need for the Card Emulator to work, I bought a straight through female serial connector on eBay for £3, cut it in half and crimped a 6 pin JST NH connector on the end.<br><br>
 Naomi <- Serial<br>
 1 <- 3<br>
 2 <- 2<br>
