@@ -12,7 +12,9 @@ A standard network cable and 5v power source for the Pi – you can make a custo
 A Web Browser :)<br>
 Optional but recommended: a zero security pic chip<br>
 Optional: a Trendnet TU-S9 USB-Serial adaptor and custom serial cable for the Card Emulator<br>
-Optional: an FTDI based RS485 to USB adaptor for OpenJVS (see https://github.com/OpenJVS/OpenJVS for more information)<br><br>
+Optional: an FTDI based RS485 to USB adaptor for OpenJVS (see https://github.com/OpenJVS/OpenJVS for more information)<br>
+Optional: OpenJVS Pi HAT (see https://github.com/OpenJVS/OpenJVS for more information)<br>
+Optional: ACS ACR122U NFC Card Reader<br><br>
 <b>General Use Instructions</b><br><br>
 Download all files from the download link and extract the img file using 7zip or similar.<br>
 Write the image to a 32GB microSD card using Win32DiskImager or Etcher and insert into the Pi.<br>
