@@ -13,14 +13,14 @@ Rapsberry Pi based Netbooter for Sega Naomi/Chihiro/Triforce arcade boards
 <p>Optional: an FTDI based RS485 to USB adaptor for OpenJVS (see <a href="https://github.com/OpenJVS/OpenJVS">https://github.com/OpenJVS/OpenJVS</a> for more information)</p>
 <p>Optional: OpenJVS Pi HAT (see <a href="https://github.com/OpenJVS/OpenJVS">https://github.com/OpenJVS/OpenJVS</a> for more information)</p>
 <p>Optional: ACS ACR122U NFC Card Reader</p>
-<p>General Use Instructions</p>
+<p><b>General Use Instructions</b></p>
 <p>Download all files from the download link and extract the img file using 7zip or similar.</p>
 <p>Write the image to a 32GB microSD card using Win32DiskImager or Etcher and insert into the Pi.</p>
 <p>Power up your arcade board and plug the network cable between the Pi and the netdimm network port, power on the Pi.</p>
 <p>When the Pi first boots up it will start broadcasting a wireless network called WiPi-Netbooter. Join either a computer or mobile device (recommended) to the network using password &lsquo;segarocks&rsquo;. Once joined, open a browser and navigate to http://netbooter.local, this will take you to the main game menu.</p>
 <p>The first time you boot up you will need to add a netdimm to the Pi. The network interface on the Pi is set to use IP address 10.0.0.1, enter the service menu on your arcade board and set the netdimm IP address in the NETWORK SETTING menu. Set NETWORK TYPE to ETHER, REMOTE to DISABLE and use the buttons to enter the address, I recommend using IP address 10.0.0.3 and Subnet Mask 255.255.255.0. Next navigate to the Setup Menu on the Pi and &lsquo;Manage Netdimms&rsquo;, you can either manually add your netdimm details or use the scanner function to find it.</p>
 <p>The main page of the web interface is used for launching games, simply browse through the game list and select a game to send the ROM to your arcade system. If you are using the Advanced Menu mode, when you select a game you will see extended game information and a gameplay video if one is present on the Pi along with a Launch Game link. Once the loading process is complete a success message is shown, after that you can safely browse to other pages or shutdown the Pi &ndash; note that the Pi needs to stay running if you are using the Time Hack mode with no zero key pic chip.</p>
-<p>Options Menu</p>
+<p><b>Options Menu</b></p>
 <p>The Options menu displays the current mode settings and provides links to toggle between them.</p>
 <p>Menu Modes</p>
 <p>There are 2 menu modes available, Simple and Advanced. Simple mode allows you to boot the ROM directly from the main game list page, Advanced mode links to a game information page that shows you extended information about the game, a video preview if available and a link to launch the game. This information can be easily edited by updating a CSV file held on the Pi, see the Updating Roms, Videos and Images section below for details.</p>
@@ -39,7 +39,7 @@ Rapsberry Pi based Netbooter for Sega Naomi/Chihiro/Triforce arcade boards
 <p>OpenJVS Support - OpenJVS is a software JVS IO emulator which allows you to connect the Pi to the Naomi using an RS485 to USB connector and play games with virtually any USB game controller. See the OpenJVS github page for full instructions. Bluetooth controller support has been added in version 6 which allows scans, pairing and removal via the web interface. If you were lucky enough to purchase an OpenJVS HAT you can enable support for it by running a script on the Pi. Connect via SSH and run &lsquo;cd OpenJVS-Hat&rsquo; then &lsquo;sudo ./hatupdate.sh&rsquo;</p>
 <p>NFC Card Reader Support - this allows you to connect an Advanced Card Systems ACR122U NFC card reader to the Pi to allow save data from the card emulator to be stored on physical cards. There will be more NFC enabled functionality coming in future releases so look out for those! You will need NTAG215 or NTAG216 cards which are cheap and readily available.</p>
 <p>LCD Mode allows you to switch between a 16x2 LCD display or 3.5-inch touchscreen attached directly to the Pi as an alternative to the web interface via a browser. If no screen is detected the Pi will switch to display only via it&rsquo;s webpages.</p>
-<p>Setup Menu</p>
+<p><b>Setup Menu</b></p>
 <p>The Setup menu is used for one time setup functions and additional features.</p>
 <p>Edit Game List</p>
 <p>The Edit Game List function is used to show and hide games in the main game list. This is useful if you want to load a full set of ROMs onto your SD card but you'd like to hide all vertical, analog and driving games for instance. Use the link in the Enabled column to toggle the setting between Yes and No to Show/Hide the game.</p>
@@ -73,7 +73,7 @@ Rapsberry Pi based Netbooter for Sega Naomi/Chihiro/Triforce arcade boards
 <p>This is used to view the existing network configuration for the Wifi and Wired interfaces and allows you to customise your setup. A basic knowledge of networking is required to navigate these settings, if for any reason you lose communication with the Pi, it can be reset by creating a text file called &lsquo;reset.txt&rsquo; in the boot drive. You can join the Pi to your home network either using the Wifi or Wired networks, use DHCP or fixed IP addressing, details of the supported configurations are detailed in the pages here.</p>
 <p>Reboot Raspberry Pi</p>
 <p>Self explanatory!</p>
-<p>Advanced</p>
+<p><b>Advanced</b></p>
 <p>For those of you who like to code, you can access the source files for the web interface in /sbin/piforce and /var/www/html. Feel free to have a poke around, generally if something cannot be done in PHP it's due to permissions, the PHP page calls a python script to execute it on its behalf. The boot process is as follows:</p>
 <p>When the Pi starts up it executes a file called rc.local that fires up a python script /sbin/piforce/check.py. This script checks a few files in the piforce folder to get settings for the power and boot modes. It then sends a netboot command if set to single mode and a shutdown command with a timer if the power mode is set to auto. The CSV file is copied back to the boot partition as part of the shutdown routine.</p>
 <p>Most of the web code is PHP so the pages are generated as they are loaded, the benefit is you can make changes on the fly without having to restart the Pi. There is a sidebarstyles.css file in /var/www/html/css that can be modified to change the colours and look and feel of the menus and webpages.</p>
