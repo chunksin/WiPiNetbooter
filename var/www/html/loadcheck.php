@@ -43,8 +43,14 @@ if (in_array($system, $supported)){
 
 $count = count($onlinedimms);
 
+if(strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') !== false){
+    $loadpage = 'load.php';
+} else { 
+    $loadpage = 'loadnochrome.php';
+}
+
 if ($count == 1){
-    header ("Location: load.php?rom=$filename&name=$gamename&dimm=$onlydimm&mapping=$mapping&ffb=$ffb");
+    header ("Location: $loadpage?rom=$filename&name=$gamename&dimm=$onlydimm&mapping=$mapping&ffb=$ffb");
 }
 
 include 'menu.php';
@@ -63,7 +69,7 @@ if ($count > 1){
    echo '<div class="box2"></p>';
    echo '<b>Multiple dimms found for '.$system.'</b></p>';
    foreach($onlinedimms as $ipaddress => $name) {
-      echo '<h1><form action="load.php?rom='.$filename.'&name='.$gamename.'&dimm='.$ipaddress.'&mapping='.$mapping.'&ffb='.$ffb.'" method="post"><input type="submit" class="bigdropbtn" value="'.$name.'"></form></h1>';
+      echo '<h1><form action="'.$loadpage.'?rom='.$filename.'&name='.$gamename.'&dimm='.$ipaddress.'&mapping='.$mapping.'&ffb='.$ffb.'" method="post"><input type="submit" class="bigdropbtn" value="'.$name.'"></form></h1>';
    }
   echo '</div>';
 }
