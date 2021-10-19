@@ -31,8 +31,8 @@ echo '<h1><a href="gamelist.php?display=all#anchor'.$name.'">Loading<br>'.$name.
 $command = escapeshellcmd('sudo python /sbin/piforce/webforce.py '.$rom.' '.$dimm.' '.$relaymode.' '.$zeromode.' '.$mapping.' '.$ffb);
 $output = shell_exec($command . '> /dev/null 2>/dev/null &');
 
-$progress = 1;
-while($progress != 0){
+$progress = 100;
+while(is_int($progress) && $progress != 0 || $progress == 'COMPLETE'){
 $handle = popen('sudo tail -n 1 /var/log/progress.txt', 'r');
 $progress = fgets($handle);
 pclose($handle);

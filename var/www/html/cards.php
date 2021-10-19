@@ -4,16 +4,6 @@ header('Content-type: image/jpeg');
 $name = $_GET["name"];
 $mode = $_GET["mode"];
 
-if ($mode == "id2"){
-$cardimage = imagecreatefromjpeg('img/ID2.jpg');
-$path = "/boot/config/cards/id2/";
-}
-
-if ($mode == "id3"){
-$cardimage = imagecreatefromjpeg('img/ID3.jpg');
-$path = "/boot/config/cards/id3/";
-}
-
 if ($mode == "fzero"){
 $cardimage = imagecreatefromjpeg('img/FZAX.jpg');
 $path = "/boot/config/cards/fzero/";
@@ -43,20 +33,6 @@ $filename = $path.$name;
 $lastModifiedTimestamp = filemtime($filename);
 $date =date("M d Y", $lastModifiedTimestamp);
 $time =date("H:i", $lastModifiedTimestamp);
-
-if ($mode == "id2" || $mode == "id3"){
-$textsize=20;
-$angle=0;
-$left=115;
-$texttop=75;
-$savedsize=18;
-$savedtop=115;
-$datesize=18;
-$datetop=145;
-$timeleft=215;
-$timesize=18;
-$timetop=145;
-}
 
 if ($mode == "fzero"){
 $textsize=15;

@@ -8,7 +8,7 @@ echo '<link rel="stylesheet" href="css/sidebarstyles.css">';
 <section><center><p>
 <h1><a href="openjvs.php">OpenJVS Controller Reference</a></h1>
 <img src="img/openjvs-controller.png"><br><br>
-<table class="center" id="options"><tr><th>Mapping Keyword</th><th>Diagram Label</th><th>Purpose</th></tr>
+<table class="center" id="options"><tr><th>Mapping Keyword</th><th>Diagram Label</th><th>Purpose</th><th>Type</th></tr>
 <?php
 $f = fopen("/sbin/piforce/mastermapping.csv", "r");
 while (($line = fgetcsv($f)) !== false) {

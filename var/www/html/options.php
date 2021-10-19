@@ -11,6 +11,8 @@ $openmode = file_get_contents('/sbin/piforce/openmode.txt');
 $soundmode = file_get_contents('/sbin/piforce/soundmode.txt');
 $navmode = file_get_contents('/sbin/piforce/navmode.txt');
 $openffbmode = file_get_contents('/sbin/piforce/ffbmode.txt');
+$emumode = file_get_contents('/sbin/piforce/emumode.txt');
+$nfcmode = file_get_contents('/sbin/piforce/nfcmode.txt');
 
 $csvfile = 'csv/romsinfo.csv';
 $path = '/boot/roms';
@@ -49,8 +51,13 @@ if ($openmode == 'openon'){echo '<tr><td>OpenJVS</td><td><b>enabled</b></td><td>
 if ($openmode == 'openoff'){echo '<tr><td>OpenJVS</td><td><b>disabled</b></td><td><a href="switchmode.php?mode=openon">enable</a></td></tr>';}
 if ($openffbmode == 'ffbon'){echo '<tr><td>OpenFFB</td><td><b>enabled</b></td><td><a href="switchmode.php?mode=ffboff">disable</a></td></tr>';}
 if ($openffbmode == 'ffboff'){echo '<tr><td>OpenFFB</td><td><b>disabled</b></td><td><a href="switchmode.php?mode=ffbon">enable</a></td></tr>';}
-if ($lcdmode == 'LCD16'){echo '<tr><td>LCD Mode</td><td><b>16x2</b></td><td><a href="switchmode.php?mode=LCD35">3.5 touch</a></td></tr></table>';}
-if ($lcdmode == 'LCD35'){echo '<tr><td>LCD Mode</td><td><b>3.5 touch</b></td><td><a href="switchmode.php?mode=LCD16">16x2</a></td></tr></table>';}
+if ($nfcmode == 'nfcon'){echo '<tr><td>NFC Support</td><td><b>enabled</b></td><td><a href="switchmode.php?mode=nfcoff">disable</a></td></tr>';}
+if ($nfcmode == 'nfcoff'){echo '<tr><td>NFC Support</td><td><b>disabled</b></td><td><a href="switchmode.php?mode=nfcon">enable</a></td></tr>';}
+if ($lcdmode == 'LCD16'){echo '<tr><td>LCD Mode</td><td><b>16x2</b></td><td><a href="switchmode.php?mode=LCD35">3.5 touch</a></td></tr>';}
+if ($lcdmode == 'LCD35'){echo '<tr><td>LCD Mode</td><td><b>3.5 touch</b></td><td><a href="switchmode.php?mode=LCD16">16x2</a></td></tr>';}
+if ($emumode == 'manual'){echo '<tr><td>Card Emu Mode</td><td><b>manual</b></td><td><a href="switchmode.php?mode=auto">auto</a></td></tr></table>';}
+if ($emumode == 'auto'){echo '<tr><td>Card Emu Mode</td><td><b>auto</b></td><td><a href="switchmode.php?mode=manual">manual</a></td></tr></table>';}
+
 echo '<table class="center" id="options"><tr></tr>';
 if ($lastgame !== ''){echo '<tr><td><b>Last Game Played: </td><td>'.$gamename.'</td></tr></table>';}
 else {echo '<tr><td><b>Last Game Played: </td><td>Unknown</td></tr></table>';}

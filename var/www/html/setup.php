@@ -17,6 +17,8 @@ echo '<a href="fwupdate.php">Update Netdimm Firmware</a></div><br>';
 echo '<div class="box2">';
 echo '<a href="cardemulator.php?mode=main">Card Reader Emulator</a></div><br>';
 echo '<div class="box2">';
+echo '<a href="cardmanagement.php?mode=main">Card Data Management</a></div><br>';
+echo '<div class="box2">';
 echo '<a href="importcsv.php">Import CSV from Boot Drive</a></div><br>';
 echo '<div class="box2">';
 echo '<a href="dumpcsv.php">View CSV Raw Data</a></div><br>';
