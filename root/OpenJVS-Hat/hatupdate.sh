@@ -5,6 +5,7 @@ VER=$(cat /proc/device-tree/model | awk '{print $3}')
 if [ $VER = "3" ]; then
    echo "Pi 3 detected, adding config.txt entries"
 if ! grep -Fxq "dtoverlay=disable-bt" /boot/config.txt; then
+   echo -e "\n" | sudo tee -a /boot/config.txt
    echo "dtoverlay=disable-bt" | sudo tee -a /boot/config.txt
    sudo systemctl disable hciuart
 else
@@ -17,6 +18,7 @@ fi
 if [ $VER = "4" ]; then
    echo "Pi 4 detected, adding config.txt entries"
 if ! grep -Fxq "dtoverlay=uart3" /boot/config.txt; then
+   echo -e "\n" | sudo tee -a /boot/config.txt
    echo "dtoverlay=uart3" | sudo tee -a /boot/config.txt
    echo "dtoverlay=uart4" | sudo tee -a /boot/config.txt
 else
