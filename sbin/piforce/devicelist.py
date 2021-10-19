@@ -10,7 +10,9 @@ for device in devices:
    i = i+1
    path = device.path
    name = device.name
-   file = name.replace(' ','-').lower()
+   file = name.replace(' ','-')
+   file = file.replace('(','-')
+   file = file.replace(')','-').lower()
    filepath = '/etc/openjvs/devices/'+file
    print(device.path, device.name)
    scriptfile.write('$path'+str(i)+' = \''+path+'\';\n')

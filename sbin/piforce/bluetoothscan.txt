@@ -1,0 +1,7 @@
+Script started on 2021-10-01 13:50:50+01:00 [<not executed on terminal>]
+Discovery started
+[[0;93mCHG[0m] Controller DC:A6:32:F2:48:7F Discovering: yes
+[[0;92mNEW[0m] Device 33:8C:65:A5:59:9A 33-8C-65-A5-59-9A
+[[0;92mNEW[0m] Device 75:5C:58:BB:14:48 75-5C-58-BB-14-48
+
+Script done on 2021-10-01 13:51:05+01:00 [COMMAND_EXIT_CODE="143"]

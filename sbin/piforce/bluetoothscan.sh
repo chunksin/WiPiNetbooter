@@ -1,0 +1,1 @@
+bluetoothctl scan on

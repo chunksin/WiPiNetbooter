@@ -143,6 +143,7 @@ def DIMM_UploadFile(name, key = None):
 	sys.stderr.write(str(f))
 	sys.stderr.write("\n")
         progressfile = open("/var/log/progress.txt", "w")
+	last = 0
 	if key:
 		d = DES.new(key[::-1], DES.MODE_ECB)
 	while True:

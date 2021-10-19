@@ -10,6 +10,13 @@ bootromfile.close
 powerfile = open('/sbin/piforce/powerfile.txt')
 powermode = file.readline(powerfile)
 powerfile.close
+nfcfile = open('/sbin/piforce/nfcmode.txt')
+nfcmode = file.readline(nfcfile)
+nfcfile.close
+
+if (nfcmode == 'nfcon'):
+  cp = subprocess.Popen(['python3', '/sbin/piforce/card_emulator/nfcread.py'])
+
 if os.path.exists('/boot/wifi.txt') == True:
   wififile = open('/boot/wifi.txt')
   wifi = file.readline(wififile)

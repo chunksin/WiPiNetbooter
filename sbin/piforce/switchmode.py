@@ -46,6 +46,16 @@ if (sys.argv[1] == 'navon') or (sys.argv[1] == 'navoff'):
    bootfile.write(sys.argv[1])
    bootfile.close
 
+if (sys.argv[1] == 'manual') or (sys.argv[1] == 'auto'):
+   bootfile = open('/sbin/piforce/emumode.txt', 'w')
+   bootfile.write(sys.argv[1])
+   bootfile.close
+
+if (sys.argv[1] == 'nfcon') or (sys.argv[1] == 'nfcoff'):
+   bootfile = open('/sbin/piforce/nfcmode.txt', 'w')
+   bootfile.write(sys.argv[1])
+   bootfile.close
+
 if (sys.argv[1] == 'LCD16'):
    bashCommand1 = 'sudo echo -n LCD16 | tee /sbin/piforce/lcdmode.txt'
    os.system(bashCommand1)
