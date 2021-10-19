@@ -1,1 +1,1 @@
-/boot/config/cards/id3/Rich2
+/boot/config/cards/fzero/Rich1
