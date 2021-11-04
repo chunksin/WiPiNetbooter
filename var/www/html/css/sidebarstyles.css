@@ -87,6 +87,10 @@ header {
 
 }
 
+select{
+  width: 120px;
+}
+
 #logo{
 
 	margin: 20px;
