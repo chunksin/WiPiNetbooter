@@ -1,5 +1,5 @@
 # WiPiNetbooter
-Rapsberry Pi based Netbooter for Sega Naomi/Chihiro/Triforce arcade boards
+Raspberry Pi based Netbooter for Sega Naomi/Chihiro/Triforce arcade boards
 
 <br><b>Full image download link:</b> https://drive.google.com/drive/folders/1d2ToNeE02WAdE3Jo_62NHlxzVegzloVy?usp=sharing<br><br>
 <b>Overview document:</b> https://docs.google.com/document/d/12AACLDVbQURruBHSkrS0YFTBzgSjb4QM/edit?usp=sharing&ouid=115197120515540717389&rtpof=true&sd=true<br>
