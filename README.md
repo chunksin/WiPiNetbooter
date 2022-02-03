@@ -13,3 +13,5 @@ Rapsberry Pi based Netbooter for Sega Naomi/Chihiro/Triforce arcade boards
 <p>Optional: an FTDI based RS485 to USB adaptor for OpenJVS (see <a href="https://github.com/OpenJVS/OpenJVS">https://github.com/OpenJVS/OpenJVS</a> for more information)</p>
 <p>Optional: OpenJVS Pi HAT (see <a href="https://github.com/OpenJVS/OpenJVS">https://github.com/OpenJVS/OpenJVS</a> for more information)</p>
 <p>Optional: ACS ACR122U NFC Card Reader</p>
+
+<p><p>Overview document: https://docs.google.com/document/d/12AACLDVbQURruBHSkrS0YFTBzgSjb4QM/edit?usp=sharing&ouid=115197120515540717389&rtpof=true&sd=true</p>
