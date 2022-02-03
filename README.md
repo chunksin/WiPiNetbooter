@@ -2,7 +2,7 @@
 Rapsberry Pi based Netbooter for Sega Naomi/Chihiro/Triforce arcade boards
 
 <br><b>Full image download link:</b> https://drive.google.com/drive/folders/1d2ToNeE02WAdE3Jo_62NHlxzVegzloVy?usp=sharing<br><br>
-<b>Overview document: https://docs.google.com/document/d/12AACLDVbQURruBHSkrS0YFTBzgSjb4QM/edit?usp=sharing&ouid=115197120515540717389&rtpof=true&sd=true</b><br><br>
+<b>Overview document:</b> https://docs.google.com/document/d/12AACLDVbQURruBHSkrS0YFTBzgSjb4QM/edit?usp=sharing&ouid=115197120515540717389&rtpof=true&sd=true<br>
 <p>This version of the Pi Netbooter code is a scratch rewrite of the original solution written by devtty0 and has been enhanced with a new user interface and richer functionality. It has full support for all netbootable Sega arcade ROMs for the Naomi, Naomi2, Triforce, Chihiro and the Atomiswave conversions made possible by Darksoft. This version also includes the card reader emulator code for games that support it, the original python scripts were written by Winteriscoming on the arcade-projects.com forums and have been adapted for use in a web interface.</p>
 <p>You will need:</p>
 <p>A Raspberry Pi v3B, 3B+ or 4B and microSD Card - 32GB Class 10 card recommended</p>
