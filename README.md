@@ -7,7 +7,7 @@ Raspberry Pi based Netbooter for Sega Naomi/Chihiro/Triforce arcade boards
 <p>You will need:</p>
 <p>A Raspberry Pi v3B, 3B+ or 4B and microSD Card - 32GB Class 10 card recommended</p>
 <p>A Naomi, Naomi2, Triforce or Chihiro with a netdimm running firmware 3.03 or greater</p>
-<p>A standard network cable and 5v power source for the Pi &ndash; you can make a custom cable to draw power directly from the system (see below)</p>
+<p>A standard network cable and 5v power source for the Pi &ndash; you can make a custom cable to draw power directly from the system</p>
 <p>A Web Browser :)</p>
 <p>Optional but recommended: a zero security pic chip</p>
 <p>Optional: a Trendnet TU-S9 USB-Serial adaptor and custom serial cable for the Card Emulator</p>
